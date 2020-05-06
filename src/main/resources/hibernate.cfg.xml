@@ -1,0 +1,38 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection setting -->
+        <property name="connection.driver_class">org.h2.Driver</property>
+        <property name="connection.url">jdbc:h2:./data/test</property>
+        <!-- SQl dialect -->
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+        <!-- Create the database schema on startup -->
+<!--        <property name="hbm2ddl.auto">create</property>-->
+        <!-- update the database schema on startup -->
+                <property name="hbm2ddl.auto">update</property>
+        <!-- Show the queries prepared by provider -->
+        <!--        <property name="show_sql">true</property>-->
+        <!-- Names the annotated entity classes -->
+        <!--  here we define mapping class :\ -->
+                <mapping class="Cards.Minion" />
+                <mapping class="Cards.Mission" />
+                <mapping class="Cards.Spell" />
+                <mapping class="Cards.Weapon" />
+                <mapping class="Cards.Card"/>
+                <mapping class="Player.Player"/>
+                <mapping class="Log.Header"/>
+                <mapping class="Log.Log"/>
+<!---->
+        <mapping class="Log.Body"/>
+<!--                <mapping class="CLI.gameCLI"/>-->
+                <mapping class="Deck.Deck"/>
+                <mapping class="Heroes.Hero"/>
+
+
+        <!--        &lt;!&ndash;        ????????????????????????????????????????????&ndash;&gt;-->
+        <!--        <mapping class="SimpleModel.Unit"/>-->
+        <!--        <mapping class="SimpleModel.Card"/>-->
+
+
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,16 @@
+Apr 04, 2020 2:53:04 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {5.1.0.Final}
+Apr 04, 2020 2:53:04 AM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Apr 04, 2020 2:53:04 AM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Exception in thread "main" java.lang.ExceptionInInitializerError
+	at serializeCardsHeroes.main(serializeCardsHeroes.java:224)
+Caused by: org.hibernate.internal.util.config.ConfigurationException: Could not locate cfg.xml resource [hibernate.cfg.xml]
+	at org.hibernate.boot.cfgxml.internal.ConfigLoader.loadConfigXmlResource(ConfigLoader.java:53)
+	at org.hibernate.boot.registry.StandardServiceRegistryBuilder.configure(StandardServiceRegistryBuilder.java:163)
+	at org.hibernate.boot.registry.StandardServiceRegistryBuilder.configure(StandardServiceRegistryBuilder.java:152)
+	at hibernate.Provider.buildSessionFactory(Provider.java:33)
+	at hibernate.Provider.<init>(Provider.java:21)
+	at hibernate.Provider.<clinit>(Provider.java:20)
+	... 1 more
